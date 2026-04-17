@@ -3,7 +3,7 @@ WORKDIR /go/src/oanc
 COPY . /go/src/oanc
 RUN CGO_ENABLED=0 go build
 
-FROM alpine:latest
+FROM alpine:3.23.4
 RUN apk --no-cache add ca-certificates shadow
 RUN useradd -m oanc
 WORKDIR /
